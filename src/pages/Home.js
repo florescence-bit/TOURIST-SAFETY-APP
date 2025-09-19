@@ -1,13 +1,17 @@
+
 import React from 'react';
-import Hero from '../components/Hero';
 import Card from '../components/Card';
 import { useNavigate } from 'react-router-dom';
+import Welcome from './Welcome';
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <div className="page home-page">
-      <Hero onGetStarted={() => navigate('/registration')} />
+      <Welcome 
+        onGetStarted={() => navigate('/registration')} 
+        onLogin={() => navigate('/login')}
+      />
 
       <section className="container">
         <div className="grid-3">

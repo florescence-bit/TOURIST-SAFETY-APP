@@ -12,14 +12,15 @@ import PoliceDashboard from './pages/PoliceDashboard';
 import Analytics from './pages/Analytics';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Welcome from './pages/Welcome';
 
 function App() {
   return (
     <div className="app-root">
-      <Navbar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/" element={<Welcome />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/digital-id" element={<DigitalID />} />
           <Route path="/check-in" element={<CheckIn />} />
@@ -31,7 +32,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
-      <Footer />
     </div>
   );
 }
