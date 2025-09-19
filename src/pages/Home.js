@@ -1,8 +1,6 @@
-
 import React from 'react';
 import Card from '../components/Card';
 import { useNavigate } from 'react-router-dom';
-import Welcome from './Welcome';
 
 const Home = () => {
   const navigate = useNavigate();
