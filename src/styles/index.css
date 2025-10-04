@@ -61,7 +61,7 @@ body {
   width: 230px;
   height: 230px;
   border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
-  top: 20vw;
+  top: 150px;
   left: calc(50vw - 115px);
 }
 
@@ -84,6 +84,8 @@ body {
   position: fixed;
   bottom: 100px;
   padding: 25px;
+  max-width: 400px;
+  left: calc(50% - 225px);
 }
 
 /* Button Styles */

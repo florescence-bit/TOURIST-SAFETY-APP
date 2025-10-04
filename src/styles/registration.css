@@ -1,0 +1,124 @@
+.registration-gradient-bg {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 40%, #138808 80%, #1A237E 100%);
+  padding-top: 48px;
+}
+
+.registration-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 48px;
+}
+
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: #138808;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  border: 2px solid #eee;
+  transition: background 0.2s, color 0.2s;
+}
+
+.step-item.active .step-circle {
+  background: #138808;
+  color: #fff;
+  border-color: #138808;
+}
+
+.step-label {
+  font-size: 0.95rem;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+}
+
+.registration-form-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  width: 350px;
+  max-width: 95vw;
+  padding: 32px 28px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration-form-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.registration-form-subtitle {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.registration-input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: #f7f7f7;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.registration-input:focus {
+  border-color: #138808;
+}
+
+.registration-next-btn {
+  width: 100%;
+  background: #138808;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.registration-next-btn:hover {
+  background: #0e6c06;
+}
+
+@media (max-width: 600px) {
+  .registration-form-card {
+    padding: 18px 8px;
+    width: 98vw;
+  }
+  .registration-steps {
+    gap: 18px;
+  }
+}

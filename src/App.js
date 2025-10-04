@@ -17,7 +17,6 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <div className="app-root">
-      <Welcome />
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/welcome" element={<Welcome />} />
