@@ -1,19 +1,30 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './../styles/components.css';
-import WelcomePic from '../assets/WelcomePic.png';
+import Bg from '../assets/bg.png';
 
-const Welcome = ({ onGetStarted, onLogin }) => {
-	return (
-		<section className="welcome-mobile-bg">
-			<h1 className="welcome-mobile-title">WELCOME TO INDIA!</h1>
-			<img src={WelcomePic} alt="Welcome to India" className="welcome-mobile-img" />
-			<div className="welcome-mobile-btn-group">
-				<button className="btn mobile-black" onClick={onGetStarted}>GET STARTED</button>
-				<button className="btn mobile-outline" onClick={onLogin}>LOGIN</button>
-			</div>
-			<div className="welcome-mobile-guidelines">Learn more about safety guidelines</div>
-		</section>
-	);
+const Welcome = () => {
+  const navigate = useNavigate();
+  return (
+    <section className="welcome-mobile-bg">
+      <div className="blob1">
+        <div className="blob2">
+          <h2 className="welcome-heading"></h2>
+        </div>
+      </div>
+    <div className="welcome-text">
+      <h3 className="welcome-heading">WELCOME TO RAH!</h3>
+      <h5 className="welcome-para">Welcome to Explore India! Embark on a journey through the vibrant colors, rich heritage, and breathtaking landscapes of India. From the majestic Himalayas in the north to the serene backwaters of the south, and from bustling cities to tranquil villages, our app brings the best of India right to your fingertips.</h5>
+    </div>
+    
+    <div className='circles'>
+       <div className="circle active"></div>
+       <div className="circle"></div>
+       <div className="circle"></div>
+    </div>
+    <button className="welcome-btn" onClick={() => navigate('/registration')}>Get Started</button>  
+    </section>
+  );
 };
 
 export default Welcome;

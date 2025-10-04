@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Welcome from './pages/Welcome';
 import Registration from './pages/Registration';
 import DigitalID from './pages/DigitalID';
 import CheckIn from './pages/CheckIn';
@@ -12,26 +13,24 @@ import PoliceDashboard from './pages/PoliceDashboard';
 import Analytics from './pages/Analytics';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Welcome from './pages/Welcome';
 
 function App() {
   return (
     <div className="app-root">
-      <main>
-        <Routes>
-          <Route path="/welcome" element={<Welcome />} />
-          <Route path="/" element={<Welcome />} />
-          <Route path="/registration" element={<Registration />} />
-          <Route path="/digital-id" element={<DigitalID />} />
-          <Route path="/check-in" element={<CheckIn />} />
-          <Route path="/mobile-app" element={<MobileApp />} />
-          <Route path="/ai-detection" element={<AIDetection />} />
-          <Route path="/police-dashboard" element={<PoliceDashboard />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
+      <Welcome />
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/welcome" element={<Welcome />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/digital-id" element={<DigitalID />} />
+        <Route path="/check-in" element={<CheckIn />} />
+        <Route path="/mobile-app" element={<MobileApp />} />
+        <Route path="/ai-detection" element={<AIDetection />} />
+        <Route path="/police-dashboard" element={<PoliceDashboard />} />
+        <Route path="/analytics" element={<Analytics />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
