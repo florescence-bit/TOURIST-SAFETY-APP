@@ -17,7 +17,7 @@ const Welcome = () => {
       <h3 className="welcome-heading">WELCOME TO RAH!</h3>
       <h5 className="welcome-para">Best companion in your journey! Embark on a journey through the vibrant colors, rich heritage, and breathtaking landscapes of India. From the majestic Himalayas in the north to the serene backwaters of the south, and from bustling cities to tranquil villages, our app brings the best of India right to your fingertips.</h5>
     </div>
-    <StepDot step={1} total={5} />
+    <StepDot step={1} total={6} />
     <button
       className="welcome-btn"
       onClick={() => navigate('/registration', { state: { step: 2 } })}
