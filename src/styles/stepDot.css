@@ -1,0 +1,22 @@
+/* Reusable Circle Decoration */
+.circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* space between circles */
+  position: fixed;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .2);
+}
+.circle.active {
+
+  background: black;
+}

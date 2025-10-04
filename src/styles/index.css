@@ -61,7 +61,7 @@ body {
   width: 230px;
   height: 230px;
   border-radius: 60% 40% 40% 60% / 60% 40% 60% 40%;
-  top: 150px;
+  top: 100px;
   left: calc(50vw - 115px);
 }
 
@@ -82,10 +82,9 @@ body {
   font-weight: 500;
   text-align: center;
   position: fixed;
-  bottom: 100px;
-  padding: 25px;
-  max-width: 400px;
-  left: calc(50% - 225px);
+  bottom: 120px;
+  max-width: 350px;
+  left: calc(50vw - 175px);
 }
 
 /* Button Styles */
@@ -103,25 +102,3 @@ body {
   cursor: pointer;
 }
 
-/* Reusable Circle Decoration */
-.circles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px; /* space between circles */
-  position: fixed;
-  bottom: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.circle {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, .2);
-}
-.circle.active {
-
-  background: black;
-}

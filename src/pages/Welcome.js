@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import StepDot from '../components/StepDots';
 import './../styles/components.css';
 import Bg from '../assets/bg.png';
 
@@ -14,15 +15,15 @@ const Welcome = () => {
       </div>
     <div className="welcome-text">
       <h3 className="welcome-heading">WELCOME TO RAH!</h3>
-      <h5 className="welcome-para">Welcome to Explore India! Embark on a journey through the vibrant colors, rich heritage, and breathtaking landscapes of India. From the majestic Himalayas in the north to the serene backwaters of the south, and from bustling cities to tranquil villages, our app brings the best of India right to your fingertips.</h5>
+      <h5 className="welcome-para">Best companion in your journey! Embark on a journey through the vibrant colors, rich heritage, and breathtaking landscapes of India. From the majestic Himalayas in the north to the serene backwaters of the south, and from bustling cities to tranquil villages, our app brings the best of India right to your fingertips.</h5>
     </div>
-    
-    <div className='circles'>
-       <div className="circle active"></div>
-       <div className="circle"></div>
-       <div className="circle"></div>
-    </div>
-    <button className="welcome-btn" onClick={() => navigate('/registration')}>Get Started</button>  
+    <StepDot step={1} total={5} />
+    <button
+      className="welcome-btn"
+      onClick={() => navigate('/registration', { state: { step: 2 } })}
+    >
+      Get Started
+    </button>  
     </section>
   );
 };
