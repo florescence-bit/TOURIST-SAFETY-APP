@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import StepDot from '../components/StepDots';
 import './../styles/registration.css';
 
@@ -16,7 +17,10 @@ const itineraryTypes = [
 ];
 
 const Registration = () => {
-  const [step, setStep] = useState(1);
+  const location = useLocation();
+  // Start at step 2 if navigated from Welcome page, else default to 2
+  const initialStep = location.state?.step || 2;
+  const [step, setStep] = useState(initialStep);
   const [form, setForm] = useState({
     fullName: '', email: '', phone: '', entryPoint: '',
     docType: '', docNumber: '', dob: '', gender: '', photo: null,
@@ -291,7 +295,7 @@ const Registration = () => {
         )}
         {/* StepDot at the bottom, same alignment as Welcome page */}
         <div style={{ marginTop: '32px', display: 'flex', justifyContent: 'center', width: '100%' }}>
-          <StepDot step={step + 1} total={6} />
+          <StepDot step={step} total={6} />
         </div>
       </div>
     </div>
